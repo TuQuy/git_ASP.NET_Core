@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Buoi1-T6-05-08-22-MVC/1.0.0": {
+        "runtime": {
+          "Buoi1-T6-05-08-22-MVC.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Buoi1-T6-05-08-22-MVC/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

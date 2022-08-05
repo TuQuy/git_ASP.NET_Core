@@ -1,0 +1,149 @@
+﻿@using Buoi1_T6_05_08_22_MVC.Models;
+
+
+<h3>Index</h3>
+@{
+    var id = "P01";
+    var quantity = 2;
+    var price = 5.6;
+    var status = false;
+    var score = 5;
+}
+
+Id: @id
+<br/>
+Quantity: @quantity
+<br/>
+Price: @price
+<br/>
+Status: @status
+<br/>
+<h1>Total: @(price * quantity)</h1>
+<h2>Status: @(status ? "Show" : "Hide")</h2>
+<br/>
+@if(status){
+    <span style="color: red">Show</span>
+} else{
+    <span style="color: blue"><h1>Hide</h1></span>
+}
+@if(score >= 8){
+    <span style="color: red">Loai A</span>
+}else if(score >=7){
+     <span style="color: blue">Loai B</span>
+}
+else if(score >=6){
+     <span style="color: green">Loai C</span>
+}
+else if(score >=5){
+     <span style="color: brown">Loai D</span>
+}
+else{
+    <h1 style="color: black">Khong co gia tri</h1>
+}
+
+
+@{
+    var names = new List<string>
+    {
+        "Name 1", "Name 2" , "Name 3", "Name 4", "Name 5"
+    };
+}
+
+<ul>
+    @foreach(var name in names)
+    {
+         <li>@name</li>
+    }
+   
+</ul>
+
+@{
+    var product = new Product
+    {
+        Id = 1,
+        Name = "Tu Quy",
+        Price = 9.8,
+        Quantity = 5
+    };
+}
+
+<h3>Product Info</h3>
+<table border="1">
+    <tr>
+        <td>Id</td>
+        <td>@product.Id</td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>@product.Name</td>
+    </tr>
+    <tr>
+        <td>Price</td>
+        <td>@product.Price</td>
+    </tr>
+    <tr>
+        <td>Quantity</td>
+        <td>@product.Quantity</td>
+    </tr>
+    <tr>
+        <td>Total</td>
+        <td>@(product.Price * @product.Quantity)</td>
+    </tr>
+</table>
+
+@{
+    var products = new List<Product>
+    {
+        new Product
+        {
+            Id = 1,
+            Name = "Tu Quy 1",
+            Price = 4.8,
+            Quantity = 3
+        },
+        new Product
+        {
+            Id = 2,
+            Name = "Tu Quy 2",
+            Price = 15,
+            Quantity = 18
+        },
+        new Product
+        {
+            Id = 3,
+            Name = "Tu Quy 3",
+            Price = 17.5,
+            Quantity = 23
+        },
+        new Product
+        {
+            Id = 4,
+            Name = "Tu Quy 4",
+            Price = 20,
+            Quantity = 25
+        },
+
+    };
+}
+
+<h3>Product List</h3>
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        
+    </tr>
+    @foreach(var p in products)
+    {
+           <tr>
+               <td>@p.Id</td>
+               <td>@p.Name</td>
+               <td>@p.Price</td>
+               <td>@p.Quantity</td>
+               <td>@(p.Price * p.Quantity) </td>
+           </tr> 
+    }
+</table>
